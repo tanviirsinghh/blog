@@ -12,25 +12,26 @@ export const Blog = () => {
     const {loading, blog} = useBlog({
         id: id || ""
     });
+    // console.log(blog)
        if(loading){
         return <div>
             loading...
         </div>
        }
-    // if (loading || !blog) {
+    if (loading || !blog) {
         return <div>
             <Appbar />
         
             <div className="h-screen flex flex-col justify-center">
                
                 <div className="flex justify-center">
-                    {/* <Spinner /> */}
+                   loading...
                 </div>
             </div>
         </div>
-    // }
+    }
     return <div>
-   
-        <FullBlog blog={blog!} />
+   <FullBlog blog={blog!} />
+     
     </div>
 }
